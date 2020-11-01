@@ -98,9 +98,10 @@ extension Board on List<Cell> {
   }
 }
 
+// TODO find a better place for this method
 List<Position> filterOutOfBound(List<Position> positions) {
   return positions
       .where((element) =>
-          element.x <= 7 && element.x >= 0 && element.y >= 0 && element.y <= 7)
+  element.x <= 7 && element.x >= 0 && element.y >= 0 && element.y <= 7)
       .toList();
 }

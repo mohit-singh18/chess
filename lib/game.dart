@@ -84,6 +84,7 @@ class _GameState extends State<Game> {
     );
   }
 
+  // TODO: Create helper methods on board & cell to simplify this method
   void _onCellTap(int index) {
     setState(() {
       // Clear all borders
