@@ -96,6 +96,13 @@ class _GameState extends State<Game> {
         );
       }
 
+      // Clear selected state if a selected cell is tapped again
+      if (selectedCellIndex == index) {
+        selectedCell = null;
+        selectedCellIndex = 0;
+        return;
+      }
+
       // Move
       if (selectedCell != null &&
           validMoves.isNotEmpty &&
