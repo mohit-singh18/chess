@@ -1,9 +1,5 @@
-// import 'package:chess/cell.dart';
-// import 'package:chess/position.dart';
-// import 'package:firstapp/cell.dart';
-// import 'package:firstapp/position.dart';
-import 'package:chess_game/cell.dart';
-import 'package:chess_game/position.dart';
+import 'cell.dart';
+import 'position.dart';
 import 'package:flutter/material.dart';
 
 enum PieceType {

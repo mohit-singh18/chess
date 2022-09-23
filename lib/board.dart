@@ -1,22 +1,9 @@
-// import 'package:chess/cell.dart';
-// import 'package:chess/pawn.dart';
-// import 'package:chess/pieces.dart';
-// import 'package:chess/position.dart';
-// import 'package:chess/queen.dart';
-// import 'package:chess/rook.dart';
-import 'package:chess_game/cell.dart';
-import 'package:chess_game/pawn.dart';
-import 'package:chess_game/pieces.dart';
-import 'package:chess_game/position.dart';
-import 'package:chess_game/queen.dart';
-import 'package:chess_game/rook.dart';
-// import 'package:firstapp/cell.dart';
-// import 'package:firstapp/pawn.dart';
-// import 'package:firstapp/pieces.dart';
-// import 'package:firstapp/position.dart';
-// import 'package:firstapp/queen.dart';
-// import 'package:firstapp/rook.dart';
-
+import 'cell.dart';
+import 'pawn.dart';
+import 'pieces.dart';
+import 'position.dart';
+import 'queen.dart';
+import 'rook.dart';
 import 'bishop.dart';
 import 'king.dart';
 import 'knight.dart';

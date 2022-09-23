@@ -1,11 +1,5 @@
-// import 'package:chess/board.dart';
-// import 'package:chess/cell.dart';
-// import 'package:chess/pieces.dart';
-// import 'package:chess/position.dart';
-import 'package:chess_game/pieces.dart';
-import 'package:chess_game/position.dart';
-// import 'package:firstapp/pieces.dart';
-// import 'package:firstapp/position.dart';
+import 'pieces.dart';
+import 'position.dart';
 import 'package:flutter/material.dart';
 
 import 'board.dart';
