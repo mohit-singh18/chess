@@ -6,12 +6,14 @@ import 'board.dart';
 import 'cell.dart';
 
 class Game extends StatefulWidget {
+  const Game({super.key});
+
   @override
   _GameState createState() => _GameState();
 }
 
 class _GameState extends State<Game> {
-  final title = 'Chess';
+  final title = 'Chess Game';
   late List<Cell> board;
   late PieceType currentTurn;
   Cell? selectedCell;
@@ -27,22 +29,33 @@ class _GameState extends State<Game> {
 
   @override
   Widget build(BuildContext context) {
+    print("Main game");
     return MaterialApp(
       title: title,
       home: Scaffold(
         appBar: AppBar(
-          title: Text(title),
+          title: Center(
+            child: Text(
+              title,
+            ),
+          ),
         ),
         body: Center(
           child: Column(
             children: [
-              const SizedBox(height: 130),
+              const SizedBox(height: 70),
+              Text(
+                currentTurn == PieceType.south ? "" : "Black's Turn",
+                style: const TextStyle(
+                  fontSize: 32,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              const SizedBox(height: 48),
               _buildBoard(),
               const SizedBox(height: 48),
               Text(
-                currentTurn == PieceType.south
-                    ? "White's Turn"
-                    : "Black's Turn",
+                currentTurn == PieceType.south ? "White's Turn" : "",
                 style: const TextStyle(
                   fontSize: 32,
                   fontWeight: FontWeight.bold,
@@ -60,7 +73,7 @@ class _GameState extends State<Game> {
       shrinkWrap: true,
       gridDelegate:
           const SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 8),
-      itemBuilder: (_, index) {
+      itemBuilder: (context, index) {
         return GestureDetector(
           onTap: () => _onCellTap(index),
           child: _buildCell(index),
@@ -82,7 +95,7 @@ class _GameState extends State<Game> {
           style: TextStyle(
             fontSize: 32,
             fontWeight: FontWeight.w400,
-            color: board[index].piece?.color ?? Colors.redAccent,
+            color: board[index].piece?.color,
           ),
         ),
       ),

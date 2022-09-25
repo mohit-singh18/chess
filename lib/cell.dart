@@ -11,7 +11,7 @@ class Cell {
 
   Cell(
     this.position, {
-    this.piece = null,
+    this.piece,
     bool? isSelected,
     bool? isHighlighted,
   })  : this.isSelected = isSelected ?? false,
